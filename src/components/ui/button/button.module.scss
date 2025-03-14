@@ -1,0 +1,123 @@
+.button {
+  all: unset;
+
+  cursor: pointer;
+  user-select: none;
+
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+
+  box-sizing: border-box;
+  padding: 12px 24px;
+
+  font-family: inherit;
+  font-weight: 700;
+  color: inherit;
+
+  border-radius: 4px;
+
+  fill: var(--color-light-100);
+
+  &:focus-visible {
+    outline: 2px solid var(--color-info-500);
+  }
+}
+
+.primary {
+  background-color: var(--color-accent-500);
+  color: var(--color-light-100);
+
+  &:hover {
+    background-color: var(--color-accent-300);
+  }
+
+  &:active {
+    background-color: var(--color-accent-900);
+  }
+
+  &.disabled {
+    background-color: var(--color-accent-900);
+  }
+}
+
+.secondary {
+  background-color: var(--color-dark-300);
+
+  &:hover {
+    background-color: var(--color-dark-100);
+  }
+
+  &:active {
+    background-color: var(--color-dark-500);
+  }
+
+  &.disabled {
+    background-color: var(--color-dark-300);
+  }
+}
+
+.fullWidth {
+  width: 100%;
+}
+
+.disabled {
+  pointer-events: none;
+  color: var(--color-light-900);
+
+  & svg {
+    // сработает если, внутри svg не объявлен fill
+    fill: var(--color-light-900);
+  }
+}
+
+a.link {
+  padding: 0;
+  font-size: var(--font-size-s);
+  line-height: var(--line-height-m);
+  color: var(--color-light-100);
+}
+
+.withSVG {
+  position: relative;
+  z-index: 2;
+
+  display: inline-block;
+
+  width: 18px;
+  height: 18px;
+  padding: 0;
+
+  text-align: center;
+
+  background-color: transparent;
+
+  &::before {
+    content: '';
+
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+
+    display: block;
+
+    width: 25px;
+    height: 25px;
+
+    opacity: 0;
+    background-color: var(--color-dark-500);
+    border-radius: 50%;
+
+    transition:
+      transform 0.3s,
+      opacity 0.3s;
+  }
+
+  &:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+}

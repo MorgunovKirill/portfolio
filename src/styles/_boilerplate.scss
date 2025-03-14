@@ -3,6 +3,7 @@ html {
   font-size: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
 }
 
 * {
@@ -30,10 +31,6 @@ option {
   color: inherit;
 }
 
-a:visited {
-  color: inherit;
-}
-
 body {
   margin: 0;
   padding: 0;
@@ -44,9 +41,10 @@ body {
 }
 
 .container {
-  max-width: 1086px;
+  width: 100%;
+  padding: 0 30px;
+  max-width: 1420px;
   margin: 0 auto;
-  padding: 36px 24px;
 }
 
 .wrapper404,

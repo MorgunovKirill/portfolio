@@ -1,0 +1,19 @@
+.contacts {
+  padding: 70px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.info {
+  max-width: 360px;
+}
+
+.form {
+  flex: 0 0 530px;
+}
+
+.title {
+  font-size: var(--font-size-xxl);
+  font-weight: var(--font-weight-bold);
+  margin: 0 0 40px 0;
+}

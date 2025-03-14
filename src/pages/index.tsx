@@ -1,19 +1,9 @@
-import Head from "next/head";
 import MainPage from "@/components/MainPage/MainPage";
+import {getHeaderLayout} from "@/components/Layouts/HeaderLayout/HeaderLayout";
 
-
-export default function Home() {
-    return (
-        <>
-            <Head>
-                <title>Portfolio</title>
-                <meta name="description" content="Morgunov Kirill portfolio"/>
-                <meta name="viewport" content="width=device-width, initial-scale=1"/>
-                <link rel="icon" href="/favicon.ico"/>
-            </Head>
-            <main>
-                <MainPage/>
-            </main>
-        </>
-    );
+function Home() {
+    return <MainPage/>
 }
+
+Home.getLayout = getHeaderLayout
+export default Home
