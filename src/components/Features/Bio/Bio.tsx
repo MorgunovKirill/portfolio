@@ -1,29 +1,26 @@
 import s from './Bio.module.scss'
-import {Button} from "@/components/ui/button";
 import Image from "next/image";
+import {useTranslation} from "@/hooks/useTranslation";
 
 export const Bio = () => {
+    const t = useTranslation()
+
     return (
         <section className={s.bio}>
             <div className={s.info}>
                 <h1 className={s.title}>
-                    Hello, I’m
-                    Kirill Morgunov
+                    {t.bio.title}
                 </h1>
                 <p className={s.description}>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi culpa dolor eos error
-                    excepturi
-                    expedita hic inventore molestiae mollitia nisi odit omnis perferendis reprehenderit, rerum
-                    sed
-                    sunt
-                    totam, ullam veniam!
+                    {t.bio.description}
                 </p>
-                <Button
+                <a
                     className={s.btn}
-                    variant={'primary'}
+                    href={'/kirillmorgunov.pdf'}
+                    download={'kirillmorgunov.pdf'}
                 >
                     Download CV
-                </Button>
+                </a>
                 <div className={s.features}>
                     <div className={s.feature}>
                         <span className={s.featureValue}>4 Y</span>

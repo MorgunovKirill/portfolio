@@ -1,22 +1,75 @@
 import s from './Contacts.module.scss'
+import {useForm} from "react-hook-form";
+import { z } from 'zod'
+import { zodResolver } from '@hookform/resolvers/zod'
+import {LocaleType} from "@/locales/ru";
+import {useTranslation} from "@/hooks/useTranslation";
+import {FormInput} from "@/components/ui/form/form-input";
+import {FormTextarea} from "@/components/ui/form/form-textarea";
+import {Button} from "@/components/ui/button";
+
+export const sendEmailSchema = (t: LocaleType) => {
+    return z.object({
+        userName: z
+            .string({ message: t.formErrors.required })
+            .min(1, t.formErrors.required)
+            .max(50, { message: t.formErrors.firstnameNoMoreThan50Characters })
+            .regex(/^[A-Za-zА-Яа-я]+$/, {
+                message: t.formErrors.firstNameMustContainOnlyLettersAZaz,
+            }),
+        email: z
+            .string()
+            .min(1, { message: t.formErrors.required })
+            .email({ message: t.formErrors.invalidEmail }),
+        message: z
+            .string()
+            .max(500, { message: t.formErrors.maxLength(500) })
+            .optional(),
+    })
+}
+
+export type sendEmailSchemaFormValues = z.infer<ReturnType<typeof sendEmailSchema>>
+
 
 export const Contacts = () => {
+    const t = useTranslation()
+    const { control, handleSubmit, reset } =
+        useForm<sendEmailSchemaFormValues>({
+            defaultValues: {
+                userName: '',
+                email: '',
+                message: '',
+            },
+            resolver: zodResolver(sendEmailSchema(t)),
+        })
+
+    const handleSubmitHandler = async (data: sendEmailSchemaFormValues) => {
+        console.log('data', data);
+    }
+
     return (
         <section id={'contacts'} className={s.contacts}>
             <div className={s.info}>
-                <h2 className={s.title}>Contact me</h2>
-                <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur dignissimos laboriosam quo
-                    repellat velit. Ab atque consectetur culpa debitis dicta, dolore doloribus harum iusto maxime nulla
-                    placeat provident quibusdam quis quisquam quo unde velit. Aliquam aliquid aperiam consequuntur,
-                    corporis delectus deserunt dicta, dignissimos dolore explicabo harum hic labore laboriosam maiores
-                    minima odit, quidem ratione reiciendis rerum saepe sapiente tenetur ullam vero voluptatum?
-                    Accusantium at commodi debitis dolor eius error id impedit magnam, mollitia numquam quibusdam
-                    recusandae similique veniam? Delectus doloribus, ducimus eligendi eum fugiat ipsa magni molestiae
-                    nam obcaecati quae tempora tenetur veritatis voluptatem. At iste nesciunt nobis nulla quis?
-                </div>
+                <h2 className={s.title}>{t.contacts.title}</h2>
+                <div>{t.contacts.description}</div>
             </div>
-            <form action="" className={s.form}>
-                FORM
+            <form onSubmit={handleSubmit(handleSubmitHandler)} className={s.form}>
+                    <FormInput
+                        containerClassName={s.input}
+                        control={control}
+                        placeholder={t.sendEmail.userName}
+                        name={'userName'}
+                        autoComplete={'off'}
+                    />
+                    <FormInput
+                        containerClassName={s.input}
+                        control={control}
+                        placeholder={t.sendEmail.email}
+                        name={'email'}
+                        autoComplete={'off'}
+                    />
+                    <FormTextarea className={s.textarea} name={'message'} control={control} placeholder={t.sendEmail.message} />
+                    <Button className={s.btn} variant={'secondary'}>{t.sendEmail.submit}</Button>
             </form>
         </section>
     )

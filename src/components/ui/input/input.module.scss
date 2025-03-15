@@ -1,0 +1,92 @@
+// Label
+.label {
+  display: block;
+  cursor: pointer;
+  font-size: var(--font-size-s);
+  color: var(--color-light-900);
+}
+
+.markedAsRequired{
+  color: var(--color-danger-500)
+}
+
+// Container
+.inputContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  &:has(.disabled) {
+    .label {
+      cursor: default;
+    }
+  }
+}
+
+// Input
+.inputField {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 100%;
+  line-height: var(--line-height-l);
+  padding: 21px 30px;
+
+  font-size: var(--font-size-m);
+  color: var(--color-dark-700);
+
+  background-color: var(--color-light-700);
+  outline: none;
+}
+
+// Error Message
+.errorMsg {
+  position: absolute;
+  margin-top: 2px;
+  font-size: var(--font-size-xs);
+  color: var(--color-danger-500);
+
+  visibility: hidden;
+  transition:
+    visibility 0.3s ease,
+    opacity 0.3s ease;
+  opacity: 0;
+
+  &.show {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+// Error State
+.error {
+  border-color: var(--color-danger-500);
+
+  &::placeholder {
+    color: var(--color-danger-500);
+  }
+
+  ~ .iconSearch {
+    color: var(--color-danger-500);
+  }
+
+  &:focus::placeholder {
+    color: var(--color-light-100);
+  }
+
+  &:focus {
+    ~ .iconSearch {
+      color: var(--color-light-100);
+    }
+  }
+}
+
+// Disabled State
+.disabled {
+  cursor: not-allowed;
+  color: var(--color-dark-100);
+  border-color: var(--color-dark-100);
+
+  &::placeholder {
+    color: var(--color-dark-100);
+  }
+}

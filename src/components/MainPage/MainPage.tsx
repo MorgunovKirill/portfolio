@@ -1,8 +1,6 @@
 import s from './MainPage.module.scss'
 import {Geist, Geist_Mono} from "next/font/google";
 import clsx from "clsx";
-import {Button} from "@/components/ui/button";
-import Image from "next/image";
 import {Bio} from "@/components/Features/Bio/Bio";
 import {Contacts} from "@/components/Features/Contacts/Contacts";
 
