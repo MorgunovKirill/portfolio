@@ -1,0 +1,31 @@
+.socials {
+  background-color: var(--color-light-100);
+  border-radius: 5px;
+  box-shadow: 0 12px 64px #1C1919;
+  padding: 12px;
+  width: fit-content;
+  height: 72px;
+  margin: 0 auto;
+  position: absolute;
+  bottom: -36px;
+  left: 0;
+  right: 0;
+  display: flex;
+  gap: 5px;
+}
+
+.link {
+  width: 48px;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  border-radius: 5px;
+  background-color: var(--color-dark-900);
+  transition: opacity 0.3s ease;
+
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+    outline: none;
+  }
+}

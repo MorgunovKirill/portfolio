@@ -16,7 +16,7 @@
 
 .btn {
   text-decoration: none;
-  background-color: var(--color-accent-500);
+  background-color: var(--color-dark-900);
   border-radius: 5px;
   padding: 12px 24px;
   color: var(--color-light-100);
@@ -25,12 +25,17 @@
 
 .btn:hover,
 .btn:focus {
-  opacity: 0.8;
+  opacity: 0.7;
+  outline: none;
 }
 
 .description {
   color: var(--color-dark-300);
   margin: 0 0 24px 0;
+}
+
+.photoBlock {
+  position: relative;
 }
 
 .photo {
@@ -49,7 +54,7 @@
   gap: 8px;
   padding: 17px;
   text-align: center;
-  background-color: var(--color-alt-100);
+  background-color: var(--color-light-100);
   width: calc(33% - 2px);
 }
 

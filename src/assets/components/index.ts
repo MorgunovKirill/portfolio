@@ -1,0 +1,5 @@
+export { default as FacebookIcon } from './facebook'
+export { default as LinkedinIcon } from './linkedin'
+export { default as GithubIcon } from './github'
+export { default as InstagramIcon } from './instagramm'
+export { default as TelegramIcon } from './telegram'

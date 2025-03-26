@@ -1,6 +1,7 @@
 import s from './Bio.module.scss'
 import Image from "next/image";
 import {useTranslation} from "@/hooks/useTranslation";
+import Socials from "@/components/Socials/Socials";
 
 export const Bio = () => {
     const t = useTranslation()
@@ -30,6 +31,7 @@ export const Bio = () => {
             </div>
             <div className={s.photoBlock}>
                 <Image className={s.photo} src={'/mainphoto.jpg'} alt={'my photo'} width={536} height={636}/>
+                <Socials />
             </div>
         </section>
     )
