@@ -14,6 +14,9 @@ export const en: LocaleType = {
         'that is easy to maintain and scale. I strive to create high-quality, intuitive\n' +
         'clear and accessible user interfaces.'
   },
+  portfolio: {
+    title: 'Portfolio',
+  },
   contacts: {
     title: 'Contact me',
     opened: 'Open to your suggestions.',

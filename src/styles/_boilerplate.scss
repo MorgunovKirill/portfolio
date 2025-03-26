@@ -47,9 +47,12 @@ body {
 
 .container {
   width: 100%;
-  padding: 0 30px;
+  padding: 0 15px;
   max-width: 1420px;
   margin: 0 auto;
+  @media (min-width: 768px) {
+    padding: 0 30px;
+  }
 }
 
 .wrapper404,

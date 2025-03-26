@@ -60,6 +60,26 @@
   }
 }
 
+.outlined {
+  border: 1px solid var(--color-dark-900);
+  color: var(--color-dark-900);
+  transition: color 0.3s ease, border-color 0.3s ease;
+
+  &:hover {
+    color: var(--color-accent-500);
+    border-color: var(--color-accent-500);
+  }
+
+  &:active {
+    color: var(--color-accent-700);
+    border-color: var(--color-accent-700);
+  }
+
+  &.disabled {
+    border-color: var(--color-dark-300);
+  }
+}
+
 .fullWidth {
   width: 100%;
 }
@@ -69,7 +89,6 @@
   color: var(--color-light-900);
 
   & svg {
-    // сработает если, внутри svg не объявлен fill
     fill: var(--color-light-900);
   }
 }
@@ -78,7 +97,7 @@ a.link {
   padding: 0;
   font-size: var(--font-size-s);
   line-height: var(--line-height-m);
-  color: var(--color-light-100);
+  color: var(--color-dark-900);
 }
 
 .withSVG {

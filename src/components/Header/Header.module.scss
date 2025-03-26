@@ -18,12 +18,22 @@
 .logo {
   font-size: var(--font-size-xxxl);
   font-weight: var(--font-weight-bold);
+  display: none;
+  @media (min-width: 768px) {
+    display: block;
+  }
 }
 
 .nav {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  gap: 30px;
+  width: 100%;
+  @media (min-width: 768px) {
+    width: auto;
+    gap: 30px;
+    justify-content: initial;
+  }
 }
 
 .link {
