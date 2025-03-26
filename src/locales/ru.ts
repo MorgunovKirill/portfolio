@@ -14,9 +14,8 @@ export const ru = {
   },
   contacts: {
     title: 'Напишите мне',
-    description: 'Открыт для Ваших предложений.\n' +
-        'Предпочитаемый способ связи:\n' +
-        'telegram: @R0bur'
+    opened: 'Открыт для Ваших предложений.',
+    preferredTypeOfCommunication: 'Предпочитаемый способ связи:',
   },
   sendEmail: {
     email: 'Почта',

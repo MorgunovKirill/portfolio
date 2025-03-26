@@ -7,6 +7,7 @@ import {useTranslation} from "@/hooks/useTranslation";
 import {FormInput} from "@/components/ui/form/form-input";
 import {FormTextarea} from "@/components/ui/form/form-textarea";
 import {Button} from "@/components/ui/button";
+import Socials from "@/components/Socials/Socials";
 
 export const sendEmailSchema = (t: LocaleType) => {
     return z.object({
@@ -51,7 +52,15 @@ export const Contacts = () => {
         <section id={'contacts'} className={s.contacts}>
             <div className={s.info}>
                 <h2 className={s.title}>{t.contacts.title}</h2>
-                <div>{t.contacts.description}</div>
+                <div className={s.text}>{t.contacts.opened}</div>
+                <div className={s.text}>
+                    <span>{t.contacts.preferredTypeOfCommunication}</span>
+                    <p>Telegram <a  href="https://t.me/R0bur"
+                                    aria-label={'telegram link'}
+                                    target="_blank"
+                                    rel="noopener noreferrer">@R0bur</a></p>
+                </div>
+                <Socials className={s.socials}/>
             </div>
             <form onSubmit={handleSubmit(handleSubmitHandler)} className={s.form}>
                     <FormInput

@@ -1,10 +1,14 @@
 import React from 'react';
 import s from './Socials.module.scss'
 import {FacebookIcon, GithubIcon, InstagramIcon, LinkedinIcon, TelegramIcon} from "@/assets/components";
+import clsx from "clsx";
 
-const Socials = () => {
+type Props = {
+    className?: string
+}
+const Socials = ({className}: Props) => {
     return (
-        <div className={s.socials}>
+        <div className={clsx(className, s.socials)}>
             <a className={s.link}
                href="https://t.me/R0bur" aria-label={'telegram link'}
                target="_blank"

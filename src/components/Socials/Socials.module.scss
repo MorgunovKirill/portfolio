@@ -1,17 +1,10 @@
 .socials {
-  background-color: var(--color-light-100);
-  border-radius: 5px;
-  box-shadow: 0 12px 64px #1C1919;
-  padding: 12px;
   width: fit-content;
   height: 72px;
   margin: 0 auto;
-  position: absolute;
-  bottom: -36px;
-  left: 0;
-  right: 0;
   display: flex;
   gap: 5px;
+  padding: 12px 0;
 }
 
 .link {

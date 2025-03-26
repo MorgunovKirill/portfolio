@@ -30,3 +30,15 @@
   margin-bottom: 40px;
 }
 
+.text {
+  margin: 0 0 10px 0;
+
+  a {
+    transition: color 0.3s ease;
+
+    &:hover,
+    &:focus {
+      color: var(--color-accent-100);
+    }
+  }
+}

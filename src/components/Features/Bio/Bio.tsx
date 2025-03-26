@@ -31,7 +31,7 @@ export const Bio = () => {
             </div>
             <div className={s.photoBlock}>
                 <Image className={s.photo} src={'/mainphoto.jpg'} alt={'my photo'} width={536} height={636}/>
-                <Socials />
+                <Socials className={s.socials} />
             </div>
         </section>
     )

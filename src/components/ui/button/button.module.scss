@@ -19,6 +19,7 @@
   border-radius: 4px;
 
   fill: var(--color-light-100);
+  transition: background-color 0.3s ease;
 
   &:focus-visible {
     outline: 2px solid var(--color-info-500);

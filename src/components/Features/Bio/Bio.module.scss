@@ -3,6 +3,17 @@
   padding-bottom: 222px;
   display: flex;
   justify-content: space-between;
+
+  .socials {
+    position: absolute;
+    bottom: -36px;
+    left: 0;
+    right: 0;
+    box-shadow: 0 12px 64px #1C1919;
+    background-color: var(--color-light-100);
+    border-radius: 5px;
+    padding: 12px;
+  }
 }
 
 .info {
@@ -68,3 +79,4 @@
   font-size: var(--font-size-xxxl);
   font-weight: var(--font-weight-bold);
 }
+

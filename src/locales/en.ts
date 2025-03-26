@@ -16,9 +16,8 @@ export const en: LocaleType = {
   },
   contacts: {
     title: 'Contact me',
-    description: 'Open to your suggestions.\n' +
-        'Preferred method of communication:\n' +
-        'telegram: @R0bur'
+    opened: 'Open to your suggestions.',
+    preferredTypeOfCommunication: 'Preferred method of communication:',
   },
   sendEmail: {
     email: 'Email',
