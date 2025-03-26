@@ -4,6 +4,7 @@ import clsx from "clsx";
 import {Bio} from "@/components/Features/Bio/Bio";
 import {Contacts} from "@/components/Features/Contacts/Contacts";
 import {Portfolio} from "@/components/Features/Portfolio/Portfolio";
+import {Skills} from "@/components/Features/Skills/Skills";
 
 const geistSans = Geist({
     variable: "--font-geist-sans",
@@ -23,6 +24,7 @@ const MainPage = () => {
             geistMono.variable
         )}>
                 <Bio/>
+                <Skills />
                 <Portfolio />
                 <Contacts />
         </div>

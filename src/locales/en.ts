@@ -14,6 +14,9 @@ export const en: LocaleType = {
         'that is easy to maintain and scale. I strive to create high-quality, intuitive\n' +
         'clear and accessible user interfaces.'
   },
+  skills: {
+    title: ' I\'m currently looking to join a cross-functional team that values improving people\'s lives through accessible design',
+  },
   portfolio: {
     title: 'Portfolio',
   },
