@@ -5,7 +5,7 @@ import {Button} from "@/components/ui/button";
 import {ArrowIcon} from "@/assets/components";
 import {PortfolioType} from "@/utils/types";
 
-export const PortfolioItem = ({imageSrc, description, type, title, link}: PortfolioType) => {
+export const PortfolioItem = ({imageSrc, shortDescription, type, title, link}: PortfolioType) => {
     const t = useTranslation()
     return (
         <li className={s.item}>
@@ -15,7 +15,7 @@ export const PortfolioItem = ({imageSrc, description, type, title, link}: Portfo
             <div className={s.itemInfo}>
                 <div className={s.itemType}>{type}</div>
                 <h3 className={s.itemTitle}>{title}</h3>
-                <div className={s.itemDescription}>{description}
+                <div className={s.itemDescription}>{shortDescription}
                 </div>
                 <Button as={Link} href={link} variant={'outlined'} className={s.itemLink}>
                     {t.portfolio.showMore}

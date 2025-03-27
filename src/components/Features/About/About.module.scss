@@ -7,9 +7,11 @@
 }
 
 .container {
-  display: flex;
-  align-items: center;
-  gap: 143px;
+  @media (min-width: 1067px) {
+    display: flex;
+    align-items: center;
+    gap: 143px;
+  }
 }
 
 .title {
@@ -22,7 +24,12 @@
 }
 
 .info {
-  flex: 0 0 529px;
+  margin-bottom: 30px;
+
+  @media (min-width: 1067px) {
+    margin-bottom: 0;
+    flex: 0 0 400px;
+  }
 }
 
 .list {
