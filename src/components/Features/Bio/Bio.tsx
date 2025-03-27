@@ -17,6 +17,9 @@ export const Bio = () => {
                     <p className={s.description}>
                         {t.bio.description}
                     </p>
+                    <p className={s.description}>
+                        {t.bio.description2}
+                    </p>
                     <a
                         className={s.btn}
                         href={'/kirillmorgunov.pdf'}

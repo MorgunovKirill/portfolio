@@ -18,7 +18,7 @@ export const PortfolioItem = ({imageSrc, description, type, title, link}: Portfo
                 <div className={s.itemDescription}>{description}
                 </div>
                 <Button as={Link} href={link} variant={'outlined'} className={s.itemLink}>
-                    Подробнее
+                    {t.portfolio.showMore}
                     <ArrowIcon />
                 </Button>
             </div>

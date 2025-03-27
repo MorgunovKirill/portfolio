@@ -3,8 +3,9 @@ import {Geist, Geist_Mono} from "next/font/google";
 import clsx from "clsx";
 import {Bio} from "@/components/Features/Bio/Bio";
 import {Contacts} from "@/components/Features/Contacts/Contacts";
-import {Portfolio} from "@/components/Features/Portfolio/Portfolio";
 import {Skills} from "@/components/Features/Skills/Skills";
+import {About} from "@/components/Features/About/About";
+import {Portfolio} from "@/components/Features/Portfolio/Portfolio";
 
 const geistSans = Geist({
     variable: "--font-geist-sans",
@@ -25,6 +26,7 @@ const MainPage = () => {
         )}>
                 <Bio/>
                 <Skills />
+                <About />
                 <Portfolio />
                 <Contacts />
         </div>

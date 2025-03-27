@@ -1,8 +1,8 @@
 import clsx from "clsx";
 import s from "./Portfolio.module.scss"
 import {useTranslation} from "@/hooks/useTranslation";
-import {PortfolioItem} from "@/components/Features/Portfolio/PortfolioItem";
 import {PortfolioType} from "@/utils/types";
+import {PortfolioItem} from "./PortfolioItem";
 
 const items: PortfolioType[] = [
     {
