@@ -2,6 +2,7 @@ import React from "react";
 import s from './ProjectPage.module.scss'
 import clsx from "clsx";
 import {PortfolioType} from "@/utils/types";
+import {useTranslation} from "@/hooks/useTranslation";
 
 const ProjectPage = ({
                          title,
@@ -12,20 +13,22 @@ const ProjectPage = ({
                          technologiesList,
                          deployLink
                      }: PortfolioType) => {
+    const t = useTranslation()
+
     return (
         <div className={s.wrapper}>
             <div className={clsx('container')}>
-                <h1 className={s.title}>Описание проекта: {title}</h1>
+                <h1 className={s.title}>{t.projects.description}: {title}</h1>
                 <div className={s.container}>
                     <div className={s.img}>
                         <img src={imageSrc} alt="image"/>
                     </div>
                     <div className={s.info}>
                         <p className={s.type}>
-                            <span>Category:</span> {category}
+                            <span>{t.projects.category}:</span> {category}
                         </p>
                         <p className={s.type}>
-                            <span>Framework:</span> {type}
+                            <span>{t.projects.framework}:</span> {type}
                         </p>
                         <ul className={s.technologiesList}>
                             {
@@ -34,7 +37,7 @@ const ProjectPage = ({
                                 })
                             }
                         </ul>
-                        <h2 className={s.heading}>Description</h2>
+                        <h2 className={s.heading}>{t.projects.description2}</h2>
                         <p>{longDescription}</p>
                     </div>
                 </div>

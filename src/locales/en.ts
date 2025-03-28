@@ -5,6 +5,7 @@ import {pluralizeEn, pluralizeRu} from '@/utils/createPluralize'
 export const en: LocaleType = {
     english: 'English',
     bio: {
+        name: 'Morgunov Kirill',
         title: 'Hello, I’m Kirill Morgunov',
         description: 'Frontend developer functioning in the industry for 4+ years now.',
         description2: 'Constantly constantly improving my skills in these technologies to expand my capabilities.\n' +
@@ -12,6 +13,9 @@ export const en: LocaleType = {
             'My main priority in development is to create efficient and clean code\n' +
             'that is easy to maintain and scale. I strive to create high-quality, intuitive\n' +
             'clear and accessible user interfaces.',
+        download: 'Download CV',
+        years: 'Y',
+        experience: 'experience',
     },
     skills: {
         title: 'I\'m currently looking to join a cross-functional team that values improving people\'s lives through accessible design',
@@ -39,6 +43,12 @@ export const en: LocaleType = {
             description: 'Last two years I work on big Laravel project. I actively use blade templates,' +
                 'all the Laravel framework environment.',
         },
+    },
+    projects: {
+        description: 'Project description',
+        description2: 'Description',
+        category: 'Category',
+        framework: 'Framework',
     },
     portfolio: {
         title: 'Portfolio',
@@ -84,5 +94,5 @@ export const en: LocaleType = {
         termsAgreement: 'Please, mark the checkbox, if you agree to our terms',
         userName: 'User name must contain only letters A-Z, a-z, 0-9',
     },
-    russian: 'Russian',
+    russian: 'Русский',
 }

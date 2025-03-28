@@ -25,12 +25,12 @@ export const Bio = () => {
                         href={'/kirillmorgunov.pdf'}
                         download={'kirillmorgunov.pdf'}
                     >
-                        Download CV
+                        {t.bio.download}
                     </a>
                     <div className={s.features}>
                         <div className={s.feature}>
-                            <span className={s.featureValue}>4 Y</span>
-                            <span className={s.featureTitle}>Experience</span>
+                            <span className={s.featureValue}>4 {t.bio.years}</span>
+                            <span className={s.featureTitle}>{t.bio.experience}</span>
                         </div>
                     </div>
                 </div>
