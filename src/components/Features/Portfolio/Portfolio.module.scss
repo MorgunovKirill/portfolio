@@ -1,6 +1,14 @@
 .portfolio {
   background-color: var(--color-light-100);
   padding: 50px 0 100px 0;
+  .itemLink {
+    width: fit-content;
+    min-width: 173px;
+    margin-top: auto;
+    svg {
+      margin-left: auto;
+    }
+  }
   @media (min-width: 768px) {
     padding: 100px 0 200px 0;
   }
@@ -79,11 +87,3 @@
   color:  var(--color-dark-300);
 }
 
-.itemLink {
-  width: fit-content;
-  min-width: 173px;
-  margin-top: auto;
-  svg {
-    margin-left: auto;
-  }
-}

@@ -64,25 +64,25 @@ export const Contacts = () => {
                     </div>
                     <Socials className={s.socials}/>
                 </div>
-                <form onSubmit={handleSubmit(handleSubmitHandler)} className={s.form}>
-                    <FormInput
-                        containerClassName={s.input}
-                        control={control}
-                        placeholder={t.sendEmail.userName}
-                        name={'userName'}
-                        autoComplete={'off'}
-                    />
-                    <FormInput
-                        containerClassName={s.input}
-                        control={control}
-                        placeholder={t.sendEmail.email}
-                        name={'email'}
-                        autoComplete={'off'}
-                    />
-                    <FormTextarea className={s.textarea} name={'message'} control={control}
-                                  placeholder={t.sendEmail.message}/>
-                    <Button className={s.btn} variant={'secondary'}>{t.sendEmail.submit}</Button>
-                </form>
+                {/*<form onSubmit={handleSubmit(handleSubmitHandler)} className={s.form}>*/}
+                {/*    <FormInput*/}
+                {/*        containerClassName={s.input}*/}
+                {/*        control={control}*/}
+                {/*        placeholder={t.sendEmail.userName}*/}
+                {/*        name={'userName'}*/}
+                {/*        autoComplete={'off'}*/}
+                {/*    />*/}
+                {/*    <FormInput*/}
+                {/*        containerClassName={s.input}*/}
+                {/*        control={control}*/}
+                {/*        placeholder={t.sendEmail.email}*/}
+                {/*        name={'email'}*/}
+                {/*        autoComplete={'off'}*/}
+                {/*    />*/}
+                {/*    <FormTextarea className={s.textarea} name={'message'} control={control}*/}
+                {/*                  placeholder={t.sendEmail.message}/>*/}
+                {/*    <Button className={s.btn} variant={'secondary'}>{t.sendEmail.submit}</Button>*/}
+                {/*</form>*/}
             </div>
         </section>
 )

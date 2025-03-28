@@ -16,6 +16,7 @@ export const items: PortfolioType[] = [
             'Pinia',
             'PrimeVue',
             'Typescript',
+            'Firebase',
         ]
     },
     {
