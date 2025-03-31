@@ -39,6 +39,7 @@ const ProjectPage = ({
                         </ul>
                         <h2 className={s.heading}>{t.projects.description2}</h2>
                         <p>{longDescription}</p>
+                        <a className={s.btn} href={deployLink} target={'_blank'} rel={'noreferrer noopener nofollow'}>{t.projects.go_to}</a>
                     </div>
                 </div>
             </div>

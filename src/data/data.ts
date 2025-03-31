@@ -10,7 +10,7 @@ export const items: PortfolioType[] = [
         imageSrc: '/interviews.png',
         type: 'Vue 3 Composition API',
         link: '/projects/interviews',
-        deployLink: '',
+        deployLink: 'https://interviews.frontstack.ru/',
         technologiesList: [
             'Vue3',
             'Pinia',
@@ -28,7 +28,7 @@ export const items: PortfolioType[] = [
         imageSrc: '/hangman.png',
         type: 'Vue 3 Composition API',
         link: '/projects/hangman',
-        deployLink: '',
+        deployLink: 'https://hangman.frontstack.ru/',
         technologiesList: [
             'Vue3',
         ]
@@ -42,7 +42,7 @@ export const items: PortfolioType[] = [
         imageSrc: '/cocktails.png',
         type: 'Vue 3 Composition API',
         link: '/projects/cocktails',
-        deployLink: '',
+        deployLink: 'https://cocktails.frontstack.ru/',
         technologiesList: [
             'Vue3',
             'Pinia',

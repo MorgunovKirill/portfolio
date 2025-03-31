@@ -47,6 +47,7 @@ export const ru = {
         description2: 'Описание',
         category: 'Категория',
         framework: 'Фреймворк',
+        go_to: 'К проекту',
     },
     portfolio: {
         title: 'Портфолио',

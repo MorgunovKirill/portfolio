@@ -49,6 +49,7 @@ export const en: LocaleType = {
         description2: 'Description',
         category: 'Category',
         framework: 'Framework',
+        go_to: 'Go to project',
     },
     portfolio: {
         title: 'Portfolio',
