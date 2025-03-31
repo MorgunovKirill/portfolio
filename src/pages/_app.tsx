@@ -12,6 +12,7 @@ import '@fontsource/geist-sans/400.css';
 import '@fontsource/geist-sans/600.css';
 import '@fontsource/geist-sans/700.css';
 
+// eslint-disable-next-line @typescript-eslint/no-empty-object-type
 export type NextPageWithLayout<P = {}, IP = P> = {
   getLayout?: (page: ReactElement) => ReactNode
 } & NextPage<P, IP>

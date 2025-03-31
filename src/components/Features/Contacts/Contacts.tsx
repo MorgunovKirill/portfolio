@@ -1,12 +1,7 @@
 import s from './Contacts.module.scss'
-import {useForm} from "react-hook-form";
-import { z } from 'zod'
-import { zodResolver } from '@hookform/resolvers/zod'
+import {z} from 'zod'
 import {LocaleType} from "@/locales/ru";
 import {useTranslation} from "@/hooks/useTranslation";
-import {FormInput} from "@/components/ui/form/form-input";
-import {FormTextarea} from "@/components/ui/form/form-textarea";
-import {Button} from "@/components/ui/button";
 import Socials from "@/components/Socials/Socials";
 import clsx from "clsx";
 
@@ -35,19 +30,19 @@ export type sendEmailSchemaFormValues = z.infer<ReturnType<typeof sendEmailSchem
 
 export const Contacts = () => {
     const t = useTranslation()
-    const { control, handleSubmit, reset } =
-        useForm<sendEmailSchemaFormValues>({
-            defaultValues: {
-                userName: '',
-                email: '',
-                message: '',
-            },
-            resolver: zodResolver(sendEmailSchema(t)),
-        })
-
-    const handleSubmitHandler = async (data: sendEmailSchemaFormValues) => {
-        console.log('data', data);
-    }
+    // const { control, handleSubmit, reset } =
+    //     useForm<sendEmailSchemaFormValues>({
+    //         defaultValues: {
+    //             userName: '',
+    //             email: '',
+    //             message: '',
+    //         },
+    //         resolver: zodResolver(sendEmailSchema(t)),
+    //     })
+    //
+    // const handleSubmitHandler = async (data: sendEmailSchemaFormValues) => {
+    //     console.log('data', data);
+    // }
 
     return (
         <section id={'contacts'} >

@@ -11,8 +11,8 @@ export const Portfolio = () => {
             <div className={clsx('container')}>
                 <h2 className={s.title}>{t.portfolio.title}</h2>
                 <ul className={s.list}>
-                    {items.map((item) => {
-                        return <PortfolioItem {...item} />
+                    {items.map((item, idx) => {
+                        return <PortfolioItem {...item} key={idx} />
                     })}
                 </ul>
             </div>

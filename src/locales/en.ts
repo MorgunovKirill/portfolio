@@ -1,6 +1,6 @@
 // eslint-disable-next-line import/namespace
 import {LocaleType} from '@/locales/ru'
-import {pluralizeEn, pluralizeRu} from '@/utils/createPluralize'
+import {pluralizeEn} from '@/utils/createPluralize'
 
 export const en: LocaleType = {
     english: 'English',
