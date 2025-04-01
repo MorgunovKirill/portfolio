@@ -49,4 +49,43 @@ export const items: PortfolioType[] = [
             'Element Plus',
         ]
     },
+    {
+        title: 'Flash cards',
+        shortDescription: 'Cards app',
+        longDescription: 'An online app where you can create cards for memorising different things',
+        category: 'Web App',
+        imageSrc: '/flash-cards.png',
+        type: 'React',
+        link: '/projects/flash-cards',
+        deployLink: 'https://flash-cards-mauve.vercel.app/sign-in',
+        technologiesList: [
+            'React',
+            'Redux',
+            'RTK Query',
+            'React Hook form',
+            'Zod',
+            'Storybook',
+            'Radix UI',
+        ]
+    },
+    {
+        title: 'Navaibe',
+        shortDescription: 'Instagram-like app',
+        longDescription: 'An online app where you can upload and share your photos',
+        category: 'Web App',
+        imageSrc: '/navaibe.png',
+        type: 'React',
+        link: '/projects/navaibe',
+        deployLink: 'https://navaibe.ru/',
+        technologiesList: [
+            'Next.js',
+            'React',
+            'Redux',
+            'RTK Query',
+            'React Hook form',
+            'Zod',
+            'Storybook',
+            'Radix UI',
+        ]
+    },
 ]

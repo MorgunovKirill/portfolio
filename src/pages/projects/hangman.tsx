@@ -4,7 +4,10 @@ import ProjectPage from "@/components/ProjectPage/ProjectPage";
 import {items} from "@/data/data";
 
 function Hangman() {
-    return <ProjectPage {...items[1]} />
+    const item = items.find((item) => {
+        return item.title === 'Hangman game'
+    })
+    return item && <ProjectPage {...item} />
 }
 
 Hangman.getLayout = getHeaderLayout

@@ -2,9 +2,13 @@ import clsx from "clsx";
 import s from "./Portfolio.module.scss"
 import {useTranslation} from "@/hooks/useTranslation";
 import {PortfolioItem} from "./PortfolioItem";
-import {items} from "@/data/data";
+import {PortfolioType} from "@/utils/types";
 
-export const Portfolio = () => {
+type Props = {
+    items: PortfolioType[]
+}
+
+export const Portfolio = ({items}: Props) => {
     const t = useTranslation()
     return (
         <div className={s.portfolio}>

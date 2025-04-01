@@ -4,7 +4,10 @@ import ProjectPage from "@/components/ProjectPage/ProjectPage";
 import {items} from "@/data/data";
 
 function Interviews() {
-    return <ProjectPage {...items[0]} />
+    const item = items.find((item) => {
+        return item.title === 'Interviews'
+    })
+    return item && <ProjectPage {...item} />
 }
 
 Interviews.getLayout = getHeaderLayout

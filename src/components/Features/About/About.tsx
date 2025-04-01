@@ -22,6 +22,7 @@ export const About = () => {
                             <li className={s.subitem}>Pinia</li>
                             <li className={s.subitem}>Typescript</li>
                             <li className={s.subitem}>Rest API</li>
+                            <li className={s.subitem}>Nuxt</li>
                             <li className={s.subitem}>Prime Vue, Element Plus</li>
                         </ul>
                     </li>
