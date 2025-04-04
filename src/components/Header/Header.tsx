@@ -3,7 +3,7 @@ import Link from "next/link";
 import {useRouter} from "next/router";
 import clsx from "clsx";
 import {Select} from "antd";
-import React, {useEffect} from "react";
+import React, {MouseEventHandler, useEffect} from "react";
 import {useTranslation} from "@/hooks/useTranslation";
 
 export const Header = () => {
@@ -27,13 +27,17 @@ export const Header = () => {
         push({pathname, query}, asPath, {locale: newLocale})
     }
 
+    const logoClickHandler = () => {
+        push('/')
+    }
+
     return (
         <header className={s.header}>
             <div className={clsx('container', s.container)}>
                 <div className={s.logo}>
                     {isHomePage ?
                         <span> {t.bio.name}</span>
-                        : <Link href={'/'}>{t.bio.name}</Link>
+                        : <button className={s.logoButton} type={'button'} onClick={logoClickHandler}>{t.bio.name}</button>
                     }
                 </div>
                 <Select

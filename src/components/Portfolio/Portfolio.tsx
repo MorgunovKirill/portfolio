@@ -2,14 +2,13 @@ import clsx from "clsx";
 import s from "./Portfolio.module.scss"
 import {useTranslation} from "@/hooks/useTranslation";
 import {PortfolioItem} from "./PortfolioItem";
+import {useFetch} from "@/hooks/useFetch";
 import {PortfolioType} from "@/utils/types";
-import useSwr from "swr";
 
-const fetcher = (url: string) => fetch(url).then((res) => res.json());
 
 export const Portfolio = () => {
     const t = useTranslation()
-    const {data, error, isLoading} = useSwr<{items: PortfolioType[]}>("/api/getData", fetcher);
+    const {data, error, isLoading} = useFetch<PortfolioType[]>('/api/getData');
 
     if (error) return <div>No data.</div>;
     if (isLoading) return <div>Loading...</div>;
