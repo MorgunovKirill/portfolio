@@ -17,7 +17,7 @@ export const Skills = () => {
                         <img src="/icons/pinia.svg" alt="pinia"/>
                     </li>
                     <li className={s.item}>
-                        <img src="/icons/ts.svg"  alt="ts"/>
+                        <img src="/icons/ts.svg" alt="ts"/>
                     </li>
                     <li className={s.item}>
                         <img src="/icons/js.svg" alt="js."/>
