@@ -103,7 +103,7 @@ export const items: PortfolioType[] = [
         title: 'Memory game',
         shortDescription: 'Memory game',
         longDescription: 'Mini game. Player has to find all of hidden image pairs.' +
-            'Game ends when all the tiles are flipped correctly.',
+            ' Game ends when all the tiles are flipped correctly.',
         category: 'Game',
         imageSrc: '/memory-game.png',
         type: 'Vue 3 Composition API',
@@ -119,7 +119,7 @@ export const items: PortfolioType[] = [
         title: 'Krestiki noliki',
         shortDescription: 'Krestiki noliki game',
         longDescription: 'Mini game. Player has to create a row of signs. ' +
-            'The player who first makes a row wins.',
+            ' The player who first makes a row wins.',
         category: 'Game',
         imageSrc: '/krestiki-noliki.png',
         type: 'Vue 3 Composition API',

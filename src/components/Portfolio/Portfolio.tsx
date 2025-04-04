@@ -8,7 +8,7 @@ import {PortfolioType} from "@/utils/types";
 
 export const Portfolio = () => {
     const t = useTranslation()
-    const {data, error, isLoading} = useFetch<PortfolioType[]>('/api/getData');
+    const {data, error, isLoading} = useFetch<{ items: PortfolioType[] }>('/api/getData');
 
     if (error) return <div>No data.</div>;
     if (isLoading) return <div>Loading...</div>;
@@ -18,7 +18,7 @@ export const Portfolio = () => {
         <div className={clsx('container')}>
             <h2 className={s.title}>{t.portfolio.title}</h2>
             <ul className={s.list}>
-                {data.items.map((item, idx) => {
+                {data.items?.map((item, idx) => {
                     return <PortfolioItem {...item} key={idx} />
                 })}
             </ul>

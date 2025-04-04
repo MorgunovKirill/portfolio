@@ -13,7 +13,7 @@ function MainPage() {
             s.mainPage
         )}>
                 <Bio/>
-                <Skills />
+                {/*<Skills />*/}
                 <About />
                 <Portfolio/>
                 <Contacts />
